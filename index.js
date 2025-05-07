@@ -30,9 +30,9 @@ app.use(
     saveUninitialized: false,
     cookie: {
       maxAge: 24 * 60 * 60 * 1000, // 1 day
-      secure: config.NODE_ENV === "production", // ✅ must be true in production
+      secure: true, // ✅ must be true in production
       httpOnly: true,
-      sameSite: config.NODE_ENV === "production" ? "none" : "lax", // ✅ 'none' for cross-origin
+      sameSite: "none", // ✅ 'none' for cross-origin
     },
   })
 );
